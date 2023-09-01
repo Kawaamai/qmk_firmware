@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 
 
-enum layers = {
+enum layers {
 	_BASE = 0,
 	_FN1,
 	_FN2,
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	// Fn3 Layer
 	[_FN3] = LAYOUT_ansi_rwkl(
-		_______, _______, _______, _______, _______, _______, _______, _______, _______, GU_ON,   GU_OFF,  KNK_ON,  KN_OFF,  _______,
+		_______, _______, _______, _______, _______, _______, _______, _______, _______, GU_ON,   GU_OFF,  NK_ON,   NK_OFF,  _______,
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_PSCR,
 		_______, QK_BOOT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_PAUS,
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,                   _______,
@@ -49,14 +49,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Kye overrides
 
-// shift + backspace => delete
+// ctrl + backspace => delete
 const key_override_t delete_key_override = ko_make_basic(MOD_MASK_CTRL, KC_BSPC, KC_DEL);
 
 // lalt + hjkl => left/down/up/right
-const key_override_t left_key_override = ko_make_basic(MOD_MASK_LALT, KC_H, KC_LEFT);
-const key_override_t down_key_override = ko_make_basic(MOD_MASK_LALT, KC_J, KC_DOWN);
-const key_override_t up_key_override = ko_make_basic(MOD_MASK_LALT, KC_K, KC_UP);
-const key_override_t right_key_override = ko_make_basic(MOD_MASK_LALT, KC_L, KC_RIGHT);
+const key_override_t left_key_override = ko_make_basic(MOD_MASK_ALT, KC_H, KC_LEFT);
+const key_override_t down_key_override = ko_make_basic(MOD_MASK_ALT, KC_J, KC_DOWN);
+const key_override_t up_key_override = ko_make_basic(MOD_MASK_ALT, KC_K, KC_UP);
+const key_override_t right_key_override = ko_make_basic(MOD_MASK_ALT, KC_L, KC_RIGHT);
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
