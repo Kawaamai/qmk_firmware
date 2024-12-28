@@ -13,9 +13,6 @@ BACKLIGHT_ENABLE = no          # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no           # Enable keyboard RGB underglow
 AUDIO_ENABLE = no              # Audio output
 RGB_MATRIX_ENABLE = yes        # Use RGB matrix
-<<<<<<< HEAD
-=======
 RGB_MATRIX_DRIVER = IS31FL3733
 KEY_OVERRIDE_ENABLE = yes
->>>>>>> 95c7570c376095c342c63303199d2988accc7339
 LTO_ENABLE = yes
